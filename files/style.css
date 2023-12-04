@@ -15,6 +15,7 @@ body {
 }
 
 body.s {
+    position: fixed;
     overflow-y: hidden;
 }
 
