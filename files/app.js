@@ -3,6 +3,7 @@ $(() => {
     $(".more-btn").on("click", e => {
         // Show Popup
         $("#popup").removeClass("inactive");
+        $("body").addClass("s");
         setTimeout(() => {
             $("#popup").removeClass("trans");
         })
@@ -14,6 +15,7 @@ $(() => {
         const $gameDescription = $(e.currentTarget).parent().siblings(".description").text();
         const $gameTotalReward = $(e.currentTarget).parent().siblings(".quick-reward").eq(0).find(".total").text();
         const $gameTasks = $(e.currentTarget).parent().siblings(".quick-reward").eq(0).find(".task-list").html();
+        const $gameLink = $(e.currentTarget).parent().siblings(".play-btn").eq(0).attr("href");
 
         $("#popup").find("#app-icon").attr("src", `./files/APP_${$gameIcon}.jpg`);
         $("#popup").find("#app-icon").attr("alt", $gameIconAlt);
@@ -21,6 +23,7 @@ $(() => {
         $("#popup").find("#total-cash").text($gameTotalReward);
         $("#popup").find("#description").text($gameDescription);
         $("#popup").find("#rewards").html($gameTasks);
+        $("#popup").find(".play-btn").attr("href", $gameLink);
     })
 
     // Toggle Reward Condition text
@@ -32,6 +35,7 @@ $(() => {
     // Close popup when click background
     $("#popup .popup-bg").on("click", () => {
         $("#popup").addClass("trans");
+        $("body").removeClass("s");
         setTimeout(() => {
             $("#popup").addClass("inactive");
         }, 200)
