@@ -15,7 +15,7 @@ $(() => {
         const $gameTotalReward = $(e.currentTarget).parent().siblings(".quick-reward").eq(0).find(".total").text();
         const $gameTasks = $(e.currentTarget).parent().siblings(".quick-reward").eq(0).find(".task-list").html();
 
-        $("#popup").find("#app-icon").attr("src", `./files/APP_${$gameIcon}.JPG`);
+        $("#popup").find("#app-icon").attr("src", `./files/APP_${$gameIcon}.jpg`);
         $("#popup").find("#app-icon").attr("alt", $gameIconAlt);
         $("#popup").find("#game-name").text($gameName);
         $("#popup").find("#total-cash").text($gameTotalReward);
