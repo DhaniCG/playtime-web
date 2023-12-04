@@ -1,6 +1,6 @@
 $(() => {
     // Turn on popup for game details
-    $(".more-btn").on("click", e => {
+    $(".more-btn, .quick-reward > div").on("click", e => {
         // Show Popup
         $("#popup").removeClass("inactive");
         $("body").addClass("s");
@@ -9,13 +9,13 @@ $(() => {
         })
 
         // Replace contents according to the selected one
-        const $gameIcon = $(e.currentTarget).parent().siblings("img").attr("src").slice(12, 16);
-        const $gameIconAlt = $(e.currentTarget).parent().siblings("img").attr("alt");
-        const $gameName = $(e.currentTarget).siblings("h3").text();
-        const $gameDescription = $(e.currentTarget).parent().siblings(".description").text();
-        const $gameTotalReward = $(e.currentTarget).parent().siblings(".quick-reward").eq(0).find(".total").text();
-        const $gameTasks = $(e.currentTarget).parent().siblings(".quick-reward").eq(0).find(".task-list").html();
-        const $gameLink = $(e.currentTarget).parent().siblings(".play-btn").eq(0).attr("href");
+        const $gameIcon = $(e.currentTarget).parent().parent().find("img").attr("src").slice(12, 16);
+        const $gameIconAlt = $(e.currentTarget).parent().parent().find("img").attr("alt");
+        const $gameName = $(e.currentTarget).parent().parent().find("h3").text();
+        const $gameDescription = $(e.currentTarget).parent().parent().find(".description").text();
+        const $gameTotalReward = $(e.currentTarget).parent().parent().find(".quick-reward").eq(0).find(".total").text();
+        const $gameTasks = $(e.currentTarget).parent().parent().find(".quick-reward").eq(0).find(".task-list").html();
+        const $gameLink = $(e.currentTarget).parent().parent().find(".play-btn").eq(0).attr("href");
 
         $("#popup").find("#app-icon").attr("src", `./files/APP_${$gameIcon}.jpg`);
         $("#popup").find("#app-icon").attr("alt", $gameIconAlt);
