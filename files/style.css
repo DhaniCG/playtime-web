@@ -15,7 +15,7 @@ body {
 }
 
 body.s {
-    position: fixed;
+    /* position: fixed; */
     overflow-y: hidden;
 }
 
@@ -25,13 +25,98 @@ main p {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* .popup, */
 #catalog .task-list,
 #catalog .description,
+#catalog .reward-condition,
 #my-games {
     display: none !important;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 1rem;
+}
+
+nav .logo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    grid-column-gap: 0.8rem;
+    color: #06121f;
+    font-family: Poppins, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    z-index: 10;
+}
+
+nav img {
+    width: 3rem;
+}
+
+nav .hamburger {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 32px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+nav .hamburger .line {
+    position: relative;
+    border-radius: 100px;
+    background-color: #397dd6;
+    height: 4px;
+    transition: 300ms;
+}
+
+nav .hamburger.active .top {
+    top: 9px;
+    transform: rotateZ(45deg);
+}
+
+nav .hamburger.active .mid {
+    opacity: 0;
+}
+
+nav .hamburger.active .btm {
+    top: -9px;
+    transform: rotateZ(-45deg);
+}
+
+nav .nav-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.4rem;
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    transition: 300ms;
+    z-index: 5;
+}
+
+nav .nav-btns a {
+    color: #06121f;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+nav .nav-btns .danger {
+    color: #f32078;
 }
 
 .top-banner {
@@ -90,24 +175,51 @@ a {
 
 .tab {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     left: 0;
-    background-color: white;
+    /* background-color: white; */
+    font-family: "Poppins", sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
+    margin-top: 1rem;
 }
 
 .tab div {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 0 0;
     gap: 8px;
     height: 38px;
     padding: 12px;
+}
+
+.tab .balance {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.tab .balance span {
+    font-weight: 700;
+}
+
+.tab .cash-btn {
+    border-radius: 8px;
+    border: 2px solid #397dd6;
+    color: #397dd6;
+    font-weight: 600;
+    height: auto;
+    padding: 6px 12px;
+    margin-right: 12px;
+    transition: 200ms;
     cursor: pointer;
+}
+
+.tab .cash-btn:hover {
+    background-color: #397dd6;
+    color: white;
 }
 
 .tab div:hover img {
@@ -275,12 +387,18 @@ a {
     transition: 200ms;
 }
 
-.popup-wrapper.trans {
+.popup-wrapper.trans,
+.nav-btns.trans,
+.cashout-failed.trans,
+.how-it-works.trans {
     opacity: 0%;
     transition: 200ms;
 }
 
-.popup-wrapper.inactive {
+.popup-wrapper.inactive,
+.nav-btns.inactive,
+.cashout-failed.inactive,
+.how-it-works.inactive {
     display: none;
 }
 
@@ -432,4 +550,101 @@ a {
 .popup .about-game::-webkit-scrollbar,
 #rewards::-webkit-scrollbar {
     display: none;
+}
+
+#cashout-form-popup form,
+#cashout-failed-popup .popup,
+#how-it-works-popup .popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    height: auto;
+    padding: 2rem 1.6rem 1.4rem;
+}
+
+#cashout-form-popup .logo {
+    width: 3rem;
+    margin-bottom: 0.5rem
+}
+
+#cashout-form-popup .logo-text {
+    color: #06121f;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.4rem;
+}
+#cashout-form-popup h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+#cashout-form-popup input {
+    border: 1px solid #acaeb1;
+    border-radius: 0.6rem;
+    width: 100%;
+    height: 38px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 0.7rem;
+    margin-bottom: 10px;
+}
+
+#cashout-form-popup input::placeholder {
+    font-weight: 500;
+    color: #a1a1a1;
+}
+
+#cashout-form-popup input[type=text]:focus {
+    border-color: #3898ec;
+    outline: 0;
+}
+
+#cashout-form-popup .play-btn {
+    border: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+#cashout-failed-popup .popup {
+    padding: 1.6rem;
+}
+
+#cashout-failed-popup .popup p {
+    color: #f32078;
+    margin: 0;
+    margin-bottom: 1.4rem;
+}
+
+#cashout-failed-popup .popup p .bold {
+    font-weight: 700;
+}
+
+#cashout-failed-popup .popup .play-btn {
+    width: 100%;
+    cursor: pointer;
+}
+
+#how-it-works-popup .popup {
+    max-height: 60vh;
+    text-align: left;
+}
+
+#how-it-works-popup ul {
+    overflow-y: scroll;
+}
+
+#how-it-works-popup ul::-webkit-scrollbar {
+    display: none;
+}
+
+#how-it-works-popup li {
+    margin-bottom: 1rem;
 }

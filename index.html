@@ -7,10 +7,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./files/style.css">
-    <title>Playtime Web</title>
+    <link rel="shortcut icon" href="./files/logo.svg" type="image/x-icon">
+    <title>Playtime - AppVista</title>
     <meta name="description" content="Earn more than $60 in total from the Game Arcade before the end of the week and get $15 extra reward!*">
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-wrapper">
+            <img src="./files/logo.svg" alt="AppVista">
+            AppVista
+        </div>
+        <div class="hamburger">
+            <div class="line top"></div>
+            <div class="line mid"></div>
+            <div class="line btm"></div>
+        </div>
+        <div class="nav-btns trans inactive">
+            <a href="">Balance</a>
+            <a class="how-it-works-btn">How it Works</a>
+            <a href="" class="danger">Sign out</a>
+        </div>
+    </nav>
+
+    <!-- Top Banner -->
     <a class="top-banner">
         <h3 class="banner-title">GAMING CHALLENGE</h3> <!-- <img src="./files/money-bag.svg" alt=""> -->
         <p><span class="bold">Earn more than $60</span> in total from the Game Arcade before the end of the week and get <span class="bold">$15 extra reward!*</span></p>
@@ -18,7 +39,8 @@
         <p class="thin corner">*Terms & Conditions apply</p>
     </a>
 
-    <div class="popup-wrapper trans inactive" id="popup">
+    <!-- Popup Preset -->
+    <div class="popup-wrapper game-info trans inactive" id="game-info-popup">
         <div class="popup-bg"></div>
         <div class="popup">
             <div class="wrapper">
@@ -30,7 +52,7 @@
             <div class="quick-reward">
                 <div class="wrapper">
                     <div class="total-reward">
-                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold" id="total-cash">0</span> Cents (USD) total</p>
+                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold" id="total-cash">0</span> (USD) total</p>
                     </div>
                 </div>
             </div>
@@ -41,9 +63,7 @@
                         <p id="description"></p>
                         <h4 class="condition">REWARD CONDITION <img src="./files/dropdown-arrow.svg" alt="" class="dropdown"></h4>
                         <p id="reward-condition">
-                            - Your reward may be delayed up to 24 hours <br>
-                            - A user would only be rewarded if the app was downloaded using the link in the offer <br>
-                            - Remember to allow tracking after opening the installed app so we can identify you to give you all your earned rewards.
+                            <!-- Reward conditions here -->
                         </p>
                         <h4>REWARDS</h4>
                     </div>
@@ -55,12 +75,48 @@
                     <h4>SUPPORT</h4>
                     <p id="support">
                         Once you've completed a task, you'll receive your reward in less than an hour – unless specified otherwise in the offer details. <br><br>
-                        Still missing currency? <a href="">Submit a ticket</a> to our team, who will be happy to help you.
+                        Still missing currency? <a href="mailto:support@appvista.io">Send us an email</a> to our team, who will be happy to help you.
                     </p>
                 </div>
                 
             </div>
             <a href="" class="play-btn">Play Now</a>
+        </div>
+    </div>
+
+    <!-- Cashout Form -->
+    <div class="popup-wrapper cashout-form trans inactive" id="cashout-form-popup">
+        <div class="popup-bg"></div>
+        <form action="" method="post" onsubmit="preventDefault()" class="popup">
+            <img src="./files/logo.svg" alt="AppVista" class="logo">
+            <div class="logo-text">AppVista</div>
+            <h2>Cashout</h2>
+            <p>Cash your balance through PayPal accoount.</p>
+            <input type="text" name="email" id="email" placeholder="PayPal Email...">
+            <div class="play-btn">Withdraw</div>
+        </form>
+    </div>
+    
+    <!-- Cashout Form -->
+    <div class="popup-wrapper cashout-failed trans inactive" id="cashout-failed-popup">
+        <div class="popup">
+            <p>Sorry, minimum balance needed for cash out is <span class="bold">$20</span></p>
+            <div class="play-btn">Click Here to Complete Tasks</div>
+        </div>
+    </div>
+    
+    <!-- How it Works Popup -->
+    <div class="popup-wrapper how-it-works trans inactive" id="how-it-works-popup">
+        <div class="popup-bg"></div>
+        <div class="popup">
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <em>Aenean commodo ligula eget dolor</em>. Aenean massa.</li>
+                <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                <li>Donec quam felis, ultricies nec, pellentesque eu, <strong>pretium quis</strong>, sem. Nulla consequat massa quis enim.</li>
+                <li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</li>
+                <li>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</li>
+                <li>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</li>
+            </ul>
         </div>
     </div>
 
@@ -75,14 +131,20 @@
                 My Games
             </div>
         </div> -->
+        <div class="tab">
+            <div class="balance">Balance: <span>$8.00</span></div>
+            <div class="cash-btn">Cashout</div>
+        </div>
+
         <div id="catalog">
+            <!-- Item 1 -->
             <div class="item">
                 <img src="./files/IMG_0023.jpg" alt="1945-Airplane Shooting">
                 <div class="detail">
-                    <h3>1945-Airplane Shooting Game</h3>
+                    <h3>Capital One Shopping</h3>
                     <div class="more-btn">More</div>
                 </div>
-                <div class="description">Take control of a warplane and jump into the thrilling combat flight action of 1945 AIR FORCE. Soar through intense missions, executing daring maneuvers, and uncover hidden secrets that defy the laws of physics.</div>
+                <div class="description">Get coupons automatically applied to your cart, get price drop notifications, Shopping Rewards and more with our 100% free tool.</div>
                 <div class="quick-reward">
                     <div>
                         <p>Up to
@@ -91,7 +153,7 @@
                         <p>per task</p>
                     </div>
                     <div>
-                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold total">39</span></p>
+                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold total">42</span></p>
                         <p>total</p>
                     </div>
                     <!-- Tasks -->
@@ -99,47 +161,52 @@
                         <div class="task-item current">
                             <div class="status">Next Task</div>
                             <img src="./files/current-task-shield.svg" alt="">
-                            <div class="task-detail">Complete Level 5</div>
-                            <div class="task-reward">7 Cents (USD)</div>
+                            <div class="task-detail">Install Tool & Sign up</div>
+                            <div class="task-reward">12 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Complete Level 25</div>
-                            <div class="task-reward">12 Cents (USD)</div>
+                            <div class="task-detail">Use Coupon Code 1x</div>
+                            <div class="task-reward">10 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Complete Level 35</div>
-                            <div class="task-reward">10 Cents (USD)</div>
+                            <div class="task-detail">Use Coupon Code 2x</div>
+                            <div class="task-reward">10 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Complete Level 50</div>
-                            <div class="task-reward">10 Cents (USD)</div>
+                            <div class="task-detail">Use Coupon Code 3x</div>
+                            <div class="task-reward">10 (USD)</div>
                         </div>
                     </div>
                 </div>
-                <a href="" class="play-btn">Play Now</a>
+                <div class="reward-condition">
+                    - You must install the add the safari extension and complete email sign up
+                </div>
+                <a href="https://rwrdzy.com/167680/841/AV" class="play-btn">Install Tool</a>
             </div>
+
+            <!-- Item 2 -->
             <div class="item">
                 <img src="./files/IMG_0024.jpg" alt="Cake Sort">
                 <div class="detail">
-                    <h3>Cake Sort - Color Puzzle Game</h3>
+                    <h3>Bingo Cash</h3>
                     <div class="more-btn">More</div>
                 </div>
-                <div class="description">Hey, cake is always a good idea, for a party, for special days, and of course for games too! Cake Sort is a new kind of merge-sorting game where you satisfy your sweet tooth while challenging your strategic thinking.</div>
+                <div class="description">Bingo Cash is the FREE Classic Bingo game to win real cash based on bingo skills! You can compete Bingo Skills with other players anytime & anywhere to win real ...</div>
                 <div class="quick-reward">
                     <div>
                         <p>Up to
-                            <img src="./files/cash-icon.svg" alt=""> <span class="bold">9</span>
+                            <img src="./files/cash-icon.svg" alt=""> <span class="bold">12</span>
                         </p>
                         <p>per task</p>
                     </div>
                     <div>
-                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold total">25</span></p>
+                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold total">44</span></p>
                         <p>total</p>
                     </div>
                     <!-- Tasks -->
@@ -147,38 +214,43 @@
                         <div class="task-item current">
                             <div class="status">Next Task</div>
                             <img src="./files/current-task-shield.svg" alt="">
-                            <div class="task-detail">Complete 5th Cake</div>
-                            <div class="task-reward">4 Cents (USD)</div>
+                            <div class="task-detail">Play 12 Games</div>
+                            <div class="task-reward">12 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Complete 10th Cake</div>
-                            <div class="task-reward">5 Cents (USD)</div>
+                            <div class="task-detail">Collect Day 4 Reward</div>
+                            <div class="task-reward">10 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Complete 15th Cake</div>
-                            <div class="task-reward">7 Cents (USD)</div>
+                            <div class="task-detail">Collect Day 5 Rewarde</div>
+                            <div class="task-reward">10 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Complete 20th Cake</div>
-                            <div class="task-reward">9 Cents (USD)</div>
+                            <div class="task-detail">Collect Day 6 Reward</div>
+                            <div class="task-reward">12 (USD)</div>
                         </div>
                     </div>
                 </div>
-                <a href="" class="play-btn">Play Now</a>
+                <div class="reward-condition">
+                    - Your reward may be delayed up to 24 hours <br>
+                    - A user would only be rewarded if the app was downloaded using the link in the offer <br>
+                    - Remember to allow tracking after opening the installed app so we can identify you to give you all your earned rewards.
+                </div>
+                <a href="https://rwrdzy.com/167680/933/AV" class="play-btn">Play Now</a>
             </div>
             <div class="item">
                 <img src="./files/IMG_0025.jpg" alt="Color Water Sort">
                 <div class="detail">
-                    <h3>Color Water Sort Woody Puzzle</h3>
+                    <h3>Blackout Bingo</h3>
                     <div class="more-btn">More</div>
                 </div>
-                <div class="description">Color Water Sort Puzzle is a fun and addictive sorting game! Try to sort the colored water in the glasses until all colors are in their respective containers, testing your puzzle-solving skills with each level.</div>
+                <div class="description">Blackout Bingo is a free app. Play the game for free to win real money through points earned against other opponents.</div>
                 <div class="quick-reward">
                     <div>
                         <p>Up to
@@ -187,7 +259,7 @@
                         <p>per task</p>
                     </div>
                     <div>
-                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold total">46</span></p>
+                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold total">44</span></p>
                         <p>total</p>
                     </div>
                     <!-- Tasks -->
@@ -195,65 +267,52 @@
                         <div class="task-item current">
                             <div class="status">Next Task</div>
                             <img src="./files/current-task-shield.svg" alt="">
-                            <div class="task-detail">Reach Level 10</div>
-                            <div class="task-reward">2 Cents (USD)</div>
+                            <div class="task-detail">Play 12 Games</div>
+                            <div class="task-reward">12 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Reach Level 15</div>
-                            <div class="task-reward">4 Cents (USD)</div>
+                            <div class="task-detail">Collect Day 4 Reward</div>
+                            <div class="task-reward">10 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Reach Level 20</div>
-                            <div class="task-reward">5 Cents (USD)</div>
+                            <div class="task-detail">Collect Day 5 Rewarde</div>
+                            <div class="task-reward">10 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Reach Level 25</div>
-                            <div class="task-reward">7 Cents (USD)</div>
-                        </div>
-                        <div class="task-item">
-                            <div class="status"> </div>
-                            <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Reach Level 30</div>
-                            <div class="task-reward">8 Cents (USD)</div>
-                        </div>
-                        <div class="task-item">
-                            <div class="status"> </div>
-                            <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Reach Level 35</div>
-                            <div class="task-reward">8 Cents (USD)</div>
-                        </div>
-                        <div class="task-item">
-                            <div class="status"> </div>
-                            <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Reach Level 50</div>
-                            <div class="task-reward">12 Cents (USD)</div>
+                            <div class="task-detail">Collect Day 6 Reward</div>
+                            <div class="task-reward">12 (USD)</div>
                         </div>
                     </div>
                 </div>
-                <a href="" class="play-btn">Play Now</a>
+                <div class="reward-condition">
+                    - Your reward may be delayed up to 24 hours <br>
+                    - A user would only be rewarded if the app was downloaded using the link in the offer <br>
+                    - Remember to allow tracking after opening the installed app so we can identify you to give you all your earned rewards.
+                </div>
+                <a href="https://rwrdzy.com/167680/829/AV" class="play-btn">Play Now</a>
             </div>
             <div class="item">
                 <img src="./files/IMG_0026.jpg" alt="Slots Era">
                 <div class="detail">
-                    <h3>Slots Era - Slot Machine 777</h3>
+                    <h3>Pool Payday</h3>
                     <div class="more-btn">More</div>
                 </div>
-                <div class="description">Slots Era is a brand new horizon in the world of Vegas Slot Machines. Try one of the best casino games for Free. Our game features an immersive journey through different eras, offering a unique blend of excitement and nostalgia with each spin!</div>
+                <div class="description">Welcome to Pool Payday, the #1 pool game for cash. Compete 1-on-1 in live real-time games for fun, for profit, or both! Our cash prizes are redeemable via Paypal, Apple Pay, and more.</div>
                 <div class="quick-reward">
                     <div>
                         <p>Up to
-                            <img src="./files/cash-icon.svg" alt=""> <span class="bold">34</span>
+                            <img src="./files/cash-icon.svg" alt=""> <span class="bold">12</span>
                         </p>
                         <p>per task</p>
                     </div>
                     <div>
-                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold total">83</span></p>
+                        <p><img src="./files/cash-icon.svg" alt=""> <span class="bold total">44</span></p>
                         <p>total</p>
                     </div>
                     <!-- Tasks -->
@@ -261,48 +320,41 @@
                         <div class="task-item current">
                             <div class="status">Next Task</div>
                             <img src="./files/current-task-shield.svg" alt="">
-                            <div class="task-detail">Make First Spin</div>
-                            <div class="task-reward">2 Cents (USD)</div>
+                            <div class="task-detail">Play 12 Games</div>
+                            <div class="task-reward">12 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Achieve Level 12</div>
-                            <div class="task-reward">4 Cents (USD)</div>
+                            <div class="task-detail">Collect Day 4 Reward</div>
+                            <div class="task-reward">10 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Achieve Level 24</div>
-                            <div class="task-reward">6 Cents (USD)</div>
+                            <div class="task-detail">Collect Day 5 Rewarde</div>
+                            <div class="task-reward">10 (USD)</div>
                         </div>
                         <div class="task-item">
                             <div class="status"> </div>
                             <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Achieve Level 49</div>
-                            <div class="task-reward">18 Cents (USD)</div>
-                        </div>
-                        <div class="task-item">
-                            <div class="status"> </div>
-                            <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Achieve Level 65</div>
-                            <div class="task-reward">19 Cents (USD)</div>
-                        </div>
-                        <div class="task-item">
-                            <div class="status"> </div>
-                            <img src="./files/locked-task-shield.svg" alt="">
-                            <div class="task-detail">Achieve Level 79</div>
-                            <div class="task-reward">34 Cents (USD)</div>
+                            <div class="task-detail">Collect Day 6 Reward</div>
+                            <div class="task-reward">12 (USD)</div>
                         </div>
                     </div>
                 </div>
-                <a href="" class="play-btn">Play Now</a>
+                <div class="reward-condition">
+                    - Your reward may be delayed up to 24 hours <br>
+                    - A user would only be rewarded if the app was downloaded using the link in the offer <br>
+                    - Remember to allow tracking after opening the installed app so we can identify you to give you all your earned rewards.
+                </div>
+                <a href="https://rwrdzy.com/167680/831/AV" class="play-btn">Play Now</a>
             </div>
 
             <div class="btns">
                 <div class="copyright">Copyright 2023 © AppVista</div>
                 <div class="footer-btns">
-                    <a href="">How it Works</a>
+                    <a class="how-it-works-btn">How it Works</a>
                     <a href="">Imprint</a>
                 </div>
             </div>
