@@ -585,6 +585,14 @@ nav .nav-btns .danger {
     margin: 0;
 }
 
+#cashout-form-popup .balance {
+    font-weight: 500;
+}
+
+#cashout-form-popup .balance span {
+    font-weight: 700;
+}
+
 #cashout-form-popup input {
     border: 1px solid #acaeb1;
     border-radius: 0.6rem;

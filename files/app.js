@@ -56,7 +56,7 @@ $(() => {
 
     // Failed/Success Cashout popup
     $("#cashout-form-popup .play-btn").on("click", () => {
-        if (parseFloat($(".balance span").text().slice(1)) < 20) {
+        if (parseFloat($(".balance span").eq(0).text().slice(1)) < 20) {
             $("#cashout-failed-popup").removeClass("inactive");
             setTimeout(() => {
                 $("#cashout-failed-popup").removeClass("trans");
