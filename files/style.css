@@ -1,0 +1,434 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F7FBFF;
+    max-width: 500px;
+    margin: auto;
+}
+
+body.s {
+    overflow-y: hidden;
+}
+
+main p {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .popup, */
+#catalog .task-list,
+#catalog .description,
+#my-games {
+    display: none !important;
+}
+
+.top-banner {
+    display: block;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(45deg, #6d5aa1, #42b3e1);
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    padding: 18px;
+}
+
+.top-banner .banner-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.top-banner .banner-title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+}
+
+.top-banner p {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+
+.top-banner img {
+    width: auto;
+    height: 1.6rem;
+}
+
+.top-banner .bold {
+    font-weight: 600;
+}
+
+.top-banner .thin {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.7rem;
+    margin-top: 3px;
+}
+
+.top-banner .thin.corner {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    margin: 0;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.tab div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    gap: 8px;
+    height: 38px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.tab div:hover img {
+    opacity: 100%;
+}
+
+.tab div.active {
+    border-bottom: 3px solid #002433;
+}
+
+.tab div.active img {
+    opacity: 100%;
+}
+
+.tab img {
+    width: auto;
+    height: 18px;
+    opacity: 50%;
+}
+
+#catalog {
+    padding-top: 2rem;
+}
+
+#catalog .item {
+    border-radius: 12px;
+    background-color: white;
+    width: 90%;
+    padding-bottom: 14px;
+    margin: auto;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#catalog .item > div {
+    padding: 0 14px;
+}
+
+#catalog .item > img {
+    object-fit: cover;
+    width: 100%;
+    height: 225px;
+}
+
+#catalog .item h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+}
+
+#catalog .item .detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 10px;
+}
+#catalog .item .detail .more-btn {
+    color: #4F46E5;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#catalog .item .quick-reward {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+#catalog .item .quick-reward > div,
+.popup .quick-reward .total-reward {
+    flex: 1 0 0;
+    border-radius: 10px;
+    border: 2px solid #8db7ee;
+    background-color: white;
+    color: #9BA6BC;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 8px;
+}
+
+#catalog .item .quick-reward > div p,
+.popup .quick-reward .total-reward p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+#catalog .item .quick-reward > div .bold,
+.popup .quick-reward .total-reward .bold {
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+#catalog .item .quick-reward > div img,
+.popup .quick-reward .total-reward img {
+    width: 0.95rem;
+    margin-left: 4px;
+    margin-right: 1px;
+}
+
+#catalog .item .play-btn,
+.popup .play-btn {
+    border-radius: 8px;
+    display: block;
+    background-color: #4076bd;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.03em;
+    width: calc(100% - 28px);
+    padding: 12px;
+    margin: auto;
+}
+
+.btns {
+    text-align: center;
+    background-color: #373a40;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    padding: 1.8rem 4.4rem;
+    font-size: .9rem;
+}
+
+.btns .copyright {
+    margin-bottom: 1.3rem;
+    font-weight: 300;
+    opacity: 60%;
+}
+
+.btns .footer-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.btns a {
+    color: #fff;
+    text-align: center;
+}
+
+.popup-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 100vw;
+    height: 100vh;
+    opacity: 100%;
+    z-index: 15;
+    transition: 200ms;
+}
+
+.popup-wrapper.trans {
+    opacity: 0%;
+    transition: 200ms;
+}
+
+.popup-wrapper.inactive {
+    display: none;
+}
+
+.popup-bg {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.popup {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    width: 80%;
+    max-width: 390px;
+    min-width: 300px;
+    height: 70vh;
+    padding: 2rem 0rem 14px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, .25);
+    overflow: hidden;
+    z-index: 15;
+}
+
+.popup .wrapper,
+#rewards {
+    padding: 0 1.6rem;
+}
+
+.popup h4 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-top: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.popup h4.condition {
+    cursor: pointer;
+}
+
+.popup .about-game {
+    position: relative;
+    flex: 0 1 auto;
+    overflow-y: scroll;
+    margin: 1rem 0;
+}
+
+.popup .about-game p {
+    color: #373a40;
+    letter-spacing: .03em;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.popup .game-title {
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+#app-icon {
+    border-radius: 8px;
+    width: 3rem;
+}
+
+.popup .quick-reward .total-reward {
+    padding: 14px 8px;
+}
+
+.popup .dropdown {
+    width: 14px;
+    margin-left: 4px;
+}
+
+.popup .dropdown.active {
+    transform: scaleY(-100%);
+}
+
+#reward-condition {
+    display: none;
+}
+
+#rewards {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+}
+
+#rewards .task-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    flex: 1 0 auto;
+    border-radius: 0.6rem;
+    border: 1px solid #acaeb1;
+    position: relative;
+    text-align: center;
+    width: 125px;
+    padding: 1rem;
+    padding-top: 2.2rem;
+}
+
+#rewards .task-item.current {
+    background-image: linear-gradient(to bottom, #397dd61e 0%, transparent 40%);
+}
+
+#rewards .task-item .status {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+#rewards .task-item.current .status {
+    color: #397dd6;
+}
+
+#rewards .task-item img {
+    width: 40px;
+}
+
+#rewards .task-detail {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: -8px;
+}
+
+#rewards .task-reward {
+    font-size: 0.8rem;
+}
+
+#support a {
+    color: #4076bd;
+}
+
+#support a:hover {
+    text-decoration: underline;
+}
+
+.popup .about-game::-webkit-scrollbar,
+#rewards::-webkit-scrollbar {
+    display: none;
+}
