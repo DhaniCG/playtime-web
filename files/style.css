@@ -28,6 +28,10 @@ a {
     cursor: pointer;
 }
 
+br {
+    margin-bottom: 6px;
+}
+
 /* .popup, */
 #catalog .task-list,
 #catalog .description,
@@ -129,6 +133,7 @@ nav .nav-btns .danger {
     font-weight: 300;
     letter-spacing: 0.03em;
     padding: 18px;
+    padding-bottom: 22px;
 }
 
 .top-banner .banner-title-wrapper {
@@ -143,6 +148,7 @@ nav .nav-btns .danger {
     font-size: 1.4rem;
     font-weight: 800;
     letter-spacing: 0.02em;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 
@@ -184,6 +190,8 @@ nav .nav-btns .danger {
     font-family: "Poppins", sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
+    width: 90%;
+    margin: auto;
     margin-top: 1rem;
 }
 
@@ -197,12 +205,15 @@ nav .nav-btns .danger {
 }
 
 .tab .balance {
-    font-weight: 600;
-    font-size: 1rem;
+    flex: 0 0 0 !important;
+    font-weight: 600 !important;
+    color: #45588a !important;
+    padding: 12px 16px !important;
 }
 
 .tab .balance span {
-    font-weight: 700;
+    font-weight: 700 !important;
+    color: #373a40;
 }
 
 .tab .cash-btn {
@@ -212,7 +223,6 @@ nav .nav-btns .danger {
     font-weight: 600;
     height: auto;
     padding: 6px 12px;
-    margin-right: 12px;
     transition: 200ms;
     cursor: pointer;
 }
@@ -295,7 +305,8 @@ nav .nav-btns .danger {
 }
 
 #catalog .item .quick-reward > div,
-.popup .quick-reward .total-reward {
+.popup .quick-reward .total-reward,
+.tab .balance {
     flex: 1 0 0;
     border-radius: 10px;
     border: 2px solid #8db7ee;
@@ -483,6 +494,11 @@ nav .nav-btns .danger {
 
 #reward-condition {
     display: none;
+}
+
+#reward-condition p {
+    margin: 0;
+    margin-bottom: 8px;
 }
 
 #rewards {
